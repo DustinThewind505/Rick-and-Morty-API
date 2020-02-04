@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src="https://dbz.space/asset/global/character/card/2000120/card_2000120_character.png" className="App-logo" alt="King Vegeta" />
         <p>
-         King Vegeta
+         King Vegeta!
         </p>
       </header>
       <CardContainer />
