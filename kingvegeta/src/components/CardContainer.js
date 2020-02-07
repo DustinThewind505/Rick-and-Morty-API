@@ -30,6 +30,7 @@ function CardContainer() {
                 <button onClick={() => setPerson("morty")}>Morty</button>
                 <button onClick={() => setPerson("summer")}>Summer</button>
                 <button onClick={() => setPerson("jerry")}>Jerry</button>
+                <button onClick={() => setPerson("beth")}>Beth</button>
             <div className="characters">
                 {rickMorty.map((data, index) => (
                     <Character
