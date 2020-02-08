@@ -14,9 +14,9 @@ function App() {
          King Vegeta!
         </h2>
       </header>
-      <form>
-        <input type='time'></input>
-      </form>
+      
+        
+      
       <CardContainer />
     </div>
   );
