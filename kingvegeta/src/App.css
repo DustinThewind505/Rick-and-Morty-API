@@ -33,6 +33,10 @@
   }
 }
 
+span {
+  font-weight: bold;
+}
+
 .characters {
   display: flex;
   flex-wrap: wrap;

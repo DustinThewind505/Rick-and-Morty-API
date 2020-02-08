@@ -34,23 +34,25 @@ function CardContainer() {
 
     return (
         <div>
+            <span>Character: |</span>
             <input
                 type='text'
-                placeholder='Test'
+                placeholder='Search'
                 value={searchTerm}
                 onChange={handleChanges}
             />
+            <span>|</span>
+            <br/>
+            <span>Pages: |</span>
             <button onClick={() => setPage(1)}>1</button>
             <button onClick={() => setPage(2)}>2</button>
             <button onClick={() => setPage(3)}>3</button>
             <button onClick={() => setPage(4)}>4</button>
             <button onClick={() => setPage(5)}>5</button>
-
-            {/* <ul>
-                {searchResults.map(el => (
-                    <li key={el}>{el}</li>
-                ))}
-            </ul> */}
+            <button onClick={() => setPage(6)}>6</button>
+            <button onClick={() => setPage(7)}>7</button>
+            <button onClick={() => setPage(8)}>8</button>
+            <span>|</span>
             <div className="characters">
                 {searchResults.map((data, index) => (
                     <Character
