@@ -27,17 +27,17 @@ const characters = [
 
 function CardContainer() {
     const [rickMorty, setRickMorty] = useState([]);
-    const [person, setPerson] = useState("summer");
+    const [page, setPage] = useState(1);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([])
 
-    useEffect(() => {
-        const results = characters.filter(el => 
-            el.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-            setSearchResults(results)
-    }, [searchTerm])
+    // useEffect(() => {
+    //     const results = characters.filter(el => 
+    //         el.toLowerCase().includes(searchTerm.toLowerCase())
+    //         );
+    //         setSearchResults(results)
+    // }, [searchTerm])
 
     function handleChanges(event){
             setSearchTerm(event.target.value)
@@ -45,16 +45,17 @@ function CardContainer() {
 
     useEffect(() => {
         axios
-            .get(`https://rickandmortyapi.com/api/character?name=${person}`)
+            .get(`https://rickandmortyapi.com/api/character?page=${page}`)
             .then(response => {
+                //const results = response.data.results.filter(character)
                 setRickMorty(response.data.results);
-                console.log(response.data.results)
+                console.log(response)
             })
             .catch(error => {
                 console.log("The data was not returned", error);
             })
 
-    }, [person])
+    }, [page])
 
 
     return (
@@ -65,11 +66,11 @@ function CardContainer() {
                 value={searchTerm}
                 onChange={handleChanges}
             />
-            <button onClick={() => setPerson("rick")}>Rick</button>
-            <button onClick={() => setPerson("morty")}>Morty</button>
-            <button onClick={() => setPerson("summer")}>Summer</button>
-            <button onClick={() => setPerson("jerry")}>Jerry</button>
-            <button onClick={() => setPerson("beth")}>Beth</button>
+            <button onClick={() => setPage(1)}>1</button>
+            <button onClick={() => setPage(2)}>2</button>
+            <button onClick={() => setPage(3)}>3</button>
+            <button onClick={() => setPage(4)}>4</button>
+            <button onClick={() => setPage(5)}>5</button>
 
             <ul>
                 {searchResults.map(el => (
