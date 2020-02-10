@@ -18,14 +18,16 @@ import './App.css';
 //     console.log("mouseclick")
 //   }
 // }, [])
-function handleClick(event){
+function handleMouseOver(event){
   event.preventDefault();
-  event.target.textContent = "https://www.bing.com/th/id/OIP.Jm_OAMZ4biSSznXhD7kNxwHaHa?pid=Api&rs=1";
+  
+  event.target.src = "https://retohercules.com/images/morty-face-png-3.png";
 }
 
-function handeOver(event){
+function handleMouseLeave(event){
   event.preventDefault();
-  event.target.textContent = '"Wubba Lubba Dub Dub!" -Rick Sanchez'
+  
+  event.target.src = "https://img.cartoongoodies.com/wp-content/uploads/2019/11/07152740/Rick-Sanchez-face-778x1024.png"
 }
 
 function App() {
@@ -33,9 +35,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://img.cartoongoodies.com/wp-content/uploads/2019/11/07152740/Rick-Sanchez-face-778x1024.png" className="App-logo" alt="Spinning Rick Sanchez head" onMouseOver={handleClick} onClick={handleClick}/>
+        <img src="https://img.cartoongoodies.com/wp-content/uploads/2019/11/07152740/Rick-Sanchez-face-778x1024.png" className="App-logo" alt="Spinning Rick Sanchez head" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}/>
         
-        <h2 onClick={handleClick} onMouseOver={handeOver}>
+        <h2>
          "Wubba Lubba Dub Dub!" -Rick Sanchez
         </h2>
       </header>
