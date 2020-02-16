@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Route, NavLink } from "react-router-dom";
 
 import Home from './components/Home';
 import CardContainer from './components/CardContainer';
@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   const [background, setBackground] = useState(false);
 
-  function bgColor(){
+  function bgColor() {
     setBackground(!background);
   }
 
@@ -23,10 +23,12 @@ function App() {
         </h2>
 
       </header>
-<Link to="/">Home</Link>
-<Link to="/characters">Characters</Link>
-      <Route path="/" component={Home}/>
-      <Route path="/characters" component={CardContainer}/>
+      <div className="navbar">
+        <NavLink exact to="/">Home</NavLink>
+        <NavLink to="/characters">Characters</NavLink>
+      </div>
+      <Route exact path="/" component={Home} />
+      <Route path="/characters" component={CardContainer} />
     </div>
   );
 }

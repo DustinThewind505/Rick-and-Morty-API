@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -21,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Special Elite', cursive;
 }
 
 @keyframes App-logo-spin {
@@ -32,9 +34,34 @@
   }
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar a {
+  font-size: 2rem;
+  font-family: 'Modak', cursive;
+  color: blue;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar a.active {
+  color: dodgerblue;
+  border: none;
+  cursor: default;
+  text-decoration: none;
+}
+
 span {
   font-weight: bold;
 }
+
+
 
 .characters {
   display: flex;
