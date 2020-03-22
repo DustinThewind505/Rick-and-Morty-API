@@ -3,11 +3,12 @@
   margin: 0;
   padding: 0;
   border: 1px solid black;
+  
 }
 
 .App {
   text-align: center;
-  
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .App-logo {
@@ -48,9 +49,10 @@
 
 .navbar a {
   font-size: 2rem;
-  font-family: 'Modak', cursive;
+  font-family: 'Russo One', sans-serif;
   color: blue;
   text-decoration: none;
+  letter-spacing: 0.3rem;
 }
 
 .navbar a:hover {
