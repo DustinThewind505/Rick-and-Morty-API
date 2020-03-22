@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Character from "./CharacterCard";
 
+import "./CardContainer.css";
+
 
 function CardContainer() {
     const [page, setPage] = useState(1);
@@ -33,7 +35,7 @@ function CardContainer() {
 
 
     return (
-        <div>
+        <div className="container">
             <span>Character: |</span>
             <input
                 type='text'
