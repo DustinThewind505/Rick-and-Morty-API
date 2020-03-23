@@ -82,6 +82,30 @@ function CardContainer() {
                     />
                 ))}
             </div>
+            <div className="footer-buttons">
+                    <span>Pages |</span>
+                    <button onClick={() => setPage(1)}>1</button>
+                    <button onClick={() => setPage(2)}>2</button>
+                    <button onClick={() => setPage(3)}>3</button>
+                    <button onClick={() => setPage(4)}>4</button>
+                    <button onClick={() => setPage(5)}>5</button>
+                    <button onClick={() => setPage(6)}>6</button>
+                    <button onClick={() => setPage(7)}>7</button>
+                    <button onClick={() => setPage(8)}>8</button>
+                    <button onClick={() => setPage(9)}>9</button>
+                    <button onClick={() => setPage(10)}>10</button>
+                    <button onClick={() => setPage(11)}>11</button>
+                    <button onClick={() => setPage(12)}>12</button>
+                    <button onClick={() => setPage(13)}>13</button>
+                    <button onClick={() => setPage(14)}>14</button>
+                    <button onClick={() => setPage(15)}>15</button>
+                    <button onClick={() => setPage(16)}>16</button>
+                    <button onClick={() => setPage(17)}>17</button>
+                    <button onClick={() => setPage(18)}>18</button>
+                    <button onClick={() => setPage(19)}>19</button>
+                    <button onClick={() => setPage(20)}>20</button>
+                    <span>|</span>
+                </div>
         </section>
 
 

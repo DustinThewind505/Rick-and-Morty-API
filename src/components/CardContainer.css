@@ -89,6 +89,8 @@ h2 {
     .character-list {
         width: 90%;
         border-radius: 10px;
+        padding: 0;
+        background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
     }
 
     .character-list div {
@@ -96,12 +98,32 @@ h2 {
         flex-direction: row-reverse;
         justify-content: space-evenly;
         align-items: center;
-        padding: 2%;
+        padding: 0 1%;
     }
 }
 
 @media (max-width: 400px) {
     .container {
         background-color: firebrick;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forms {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forms div {
+        width: 100%;
+    }
+
+    .character-list div {
+        display: flex;
+        flex-direction: column;
     }
 }
