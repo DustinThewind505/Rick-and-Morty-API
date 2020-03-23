@@ -25,9 +25,16 @@ h2 {
     background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
   }
 
+  .character-list img {
+      margin: 2% 0;
+      border: 2px solid black;
+  }
+
   .doa {
     font-family: 'Special Elite', cursive;
     font-size: 2rem;
+    color: firebrick;
+    text-shadow: 2px 2px black;
   }
 
 @media (max-width: 800px) {
