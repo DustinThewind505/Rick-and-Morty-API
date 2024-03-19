@@ -58,15 +58,16 @@ h2 {
       border: 1px solid black;
   }
 
-  .forms button {
+  .forms button, .footer-buttons  button {
       width: 20px;
       margin: 0 0.2%;
       font-family: 'Russo One', sans-serif;
   }
 
-  .forms button:hover {
+  .forms button:hover, .footer-buttons button:hover {
     background-color: #282c34;
     color: white;
+    transform: translateY(-5px);
 }
 
 @media (max-width: 800px) {
