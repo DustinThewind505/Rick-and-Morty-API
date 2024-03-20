@@ -4,7 +4,13 @@ function Home(){
 
 
     return(
-        <h1>Ello Poppet</h1>
+        <div className="home-container">
+            <h1>Home</h1>
+            <div className="morty-gifs">
+                <img src="images/rick-morty-logo.png" alt="Rick and Morty logo" />
+                <button>FREE 24/7 MARATHON</button>
+            </div>
+        </div>
     )
 }
 
