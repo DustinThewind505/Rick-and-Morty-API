@@ -5,11 +5,21 @@ function Home(){
 
     return(
         <div className="home-container">
-            <h1>Home</h1>
             <div className="morty-gifs">
                 <img src="images/rick-morty-logo.png" alt="Rick and Morty logo" />
-                <button>FREE 24/7 MARATHON</button>
+                <a href="https://www.adultswim.com/streams/rick-and-morty" rel="noopener noreferrer" target="_blank" >FREE 24/7 MARATHON</a>
             </div>
+            <div>
+                <div> Season 7</div>
+                <div> Season 6</div>
+                <div> Season 5</div>
+                <div> Season 4</div>
+                <div> Season 3</div>
+                <div> Season 2</div>
+            </div>
+            <footer>
+                <p>FOOTER</p>
+            </footer>
         </div>
     )
 }
