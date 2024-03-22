@@ -71,6 +71,8 @@ span {
 }
 
 .home-container {
+  background-color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,4 +133,56 @@ span {
     background: url("../public/images/morty-gif1.gif");
     background-size: cover;
   }
+}
+
+.seasons-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 95%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.seasons-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.seasons-container a:hover {
+  color: yellow;
+}
+
+.seasons-card {
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.seasons-card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seasons-card-title  p:last-of-type {
+  font-size: 2.8rem;
+}
+
+.episodes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.episodes-container p:first-of-type {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+}
+
+.episodes-container a {
+  width: 45%;
+  margin-bottom: 2rem;
 }
