@@ -52,6 +52,66 @@ const seasonData = [
                 link: "https://www.adultswim.com/videos/rick-and-morty/fear-no-mort"
             }
         ]
+    },
+    {
+        id: 6,
+        seasonNumber: 6,
+        availableEpisodes: [
+            {
+                id: 7,
+                title: "EP 7 FULL META JACKRICK",
+                description: "This one wrinkled my brain, broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/full-meta-jackrick"
+            },
+            {
+                id: 8,
+                title: "EP 8 ANALYZE PISS",
+                description: "Haters gonna hate, broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/analyze-piss"
+            }
+        ]
+    },
+    {
+        id: 3,
+        seasonNumber: 3,
+        availableEpisodes: [
+            {
+                id: 8,
+                title: "EP 8 MORTY'S MIND BLOWERS",
+                description: "Morty's memories are restored and we learn the truth in this one broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/mortys-mind-blowers"
+            },
+            {
+                id: 9,
+                title: "EP 9 THE ABC'S OF BETH",
+                description: "Jerry pulls in some lady inthis one broh. Beth revisits her childhood. hello world",
+                link: "https://www.adultswim.com/videos/rick-and-morty/the-ab-cs-of-beth"
+            },
+            {
+                id: 10,
+                title: "EP 10 THE RICKCHURIAN MORTYDATE",
+                description: "Rick goes toe to toe with the President in this one broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/the-rickchurian-mortydate"
+            }
+        ]
+    },
+    {
+        id: 2,
+        seasonNumber: 2,
+        availableEpisodes: [
+            {
+                id: 8,
+                title: "EP 8 INTERDIMENSIONA CABLE 2: TEMPTING FATE",
+                description: "Things going ham in this one broh. Jerry gets all sick and Rick sparks up the TV broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/interdimensional-cable-2-tempting-fate"
+            },
+            {
+                id: 9,
+                title: "EP 9 lOOK WHO'S PURGING NOW",
+                description: "Morty goofs this time broh and now they gotta chill out and wait. Jerry and Summer explore their father daughter relationship too broh.",
+                link: "https://www.adultswim.com/videos/rick-and-morty/look-whos-purging-now"
+            }
+        ]
     }
 ];
 
