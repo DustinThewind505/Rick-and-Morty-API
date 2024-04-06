@@ -1,52 +1,72 @@
 footer {
     background-color: rgb(17, 17, 17);
     color: white;
-    min-height: 10vh;
-    text-align: left;
-    width: 90%;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-bottom: 6rem;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
 }
 
 footer a {
-    color: white;
-    min-height: 10vh;
     text-decoration: none;
 }
 
-footer img {
-    width: 10%;
-}
-
-
 footer p:first-of-type {
     font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 .footer-extra-rick-and-morty-links {
     display: flex;
-    width: 80%;
+    width: 70%;
 }
 
 .footer-extra-rick-and-morty-links div {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    width: 25%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    padding: 0.05rem 0;
+}
+
+.footer-extra-rick-and-morty-links div:first-of-type {
+    border-left: 0;
+}
+
+.footer-extra-rick-and-morty-links div:last-of-type {
+    border-right: 0;
 }
 
 .footer-social-media-links {
-    background-color: blue;
     display: flex;
-    width: 100%;
+    justify-content: space-between;
 }
 
-footer svg {
+.footer-social-media-links a {
+    margin: 0 1rem;
+}
+
+.footer-social-media-links svg {
     background-color: aquamarine;
     border: 0.6rem solid aquamarine;
-    border-radius: 0.5rem;
-    height: 4rem;
-    width: 4rem;
+    border-radius: 1.1rem;
+    height: 2.8rem;
+    width: 2.8rem;
 }
 
-footer svg:hover {
+.footer-social-media-links svg:hover {
     background-color: yellow;
-    border: 0.2rem solid yellow;
+    border: 0.4em solid yellow;
+}
+
+.footer-game-links {
+    color: white;
+}
+
+.footer-game-links:hover {
+    color: yellow;
 }
