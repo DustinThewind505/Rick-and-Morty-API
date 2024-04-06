@@ -1,0 +1,52 @@
+footer {
+    background-color: rgb(17, 17, 17);
+    color: white;
+    min-height: 10vh;
+    text-align: left;
+    width: 90%;
+}
+
+footer a {
+    color: white;
+    min-height: 10vh;
+    text-decoration: none;
+}
+
+footer img {
+    width: 10%;
+}
+
+
+footer p:first-of-type {
+    font-size: 2rem;
+}
+
+.footer-extra-rick-and-morty-links {
+    display: flex;
+    width: 80%;
+}
+
+.footer-extra-rick-and-morty-links div {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 25%;
+}
+
+.footer-social-media-links {
+    background-color: blue;
+    display: flex;
+    width: 100%;
+}
+
+footer svg {
+    background-color: aquamarine;
+    border: 0.6rem solid aquamarine;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+footer svg:hover {
+    background-color: yellow;
+    border: 0.2rem solid yellow;
+}
