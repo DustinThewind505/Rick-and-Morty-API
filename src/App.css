@@ -21,16 +21,19 @@
   }
 }
 
-.App-header {
+.app-header {
+  background: url("../public/images/rick-and-morty-wallpaper.jpg");
   background-color: #282c34;
+  border-bottom: 2px solid #282c34;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  font-family: 'Special Elite', cursive;
   min-height: 50vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  font-family: 'Special Elite', cursive;
 }
 
 @keyframes App-logo-spin {
@@ -43,14 +46,17 @@
 }
 
 .navbar {
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-evenly;
+  padding: 1rem;
+  width: 100%;
 }
 
 .navbar a {
   font-size: 2.5rem;
   font-family: 'Russo One', sans-serif;
-  color: blue;
+  color: dodgerblue;
   text-decoration: none;
   letter-spacing: 0.3rem;
 }
@@ -60,10 +66,10 @@
 }
 
 .navbar a.active {
-  color: dodgerblue;
+  color: greenyellow;
   border: none;
   cursor: default;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 span {
