@@ -1,11 +1,10 @@
 footer {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(27, 27, 27);
     color: white;
     padding-top: 5rem;
     padding-left: 2rem;
     padding-bottom: 6rem;
     font-family: 'Russo One', sans-serif;
-    font-weight: bold;
 }
 
 footer a {

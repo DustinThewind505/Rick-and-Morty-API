@@ -25,16 +25,16 @@ export default function Footer() {
                     </a>
                 </div>
                 <div>
-                    <a className="footer-game-links" href="https://rickandmortywormageddon.com/" target="_blank">Wormageddon</a>
+                    <a className="footer-game-links" href="https://rickandmortywormageddon.com/" rel="noreferrer" target="_blank">Wormageddon</a>
                 </div>
                 <div> 
-                    <a className="footer-game-links" href="https://gorickyourself.com/" target="_blank">Go Rick Yourself</a> 
+                    <a className="footer-game-links" href="https://gorickyourself.com/" rel="noreferrer" target="_blank">Go Rick Yourself</a> 
                 </div>
                 <div>
-                    <a className="footer-game-links" href="https://www.adultswim.com/games/pocket-mortys" target="_blank">Pocket Mortys</a>
+                    <a className="footer-game-links" href="https://www.adultswim.com/games/pocket-mortys" rel="noreferrer" target="_blank">Pocket Mortys</a>
                 </div>
                 <div>
-                    <a className="footer-game-links" href="https://wbshop.com/collections/rick-and-morty" target="_blank">Shop Rick and Morty</a>
+                    <a className="footer-game-links" href="https://wbshop.com/collections/rick-and-morty" rel="noreferrer" target="_blank">Shop Rick and Morty</a>
                 </div>
             </div>
         </footer>
