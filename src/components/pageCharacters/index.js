@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Character from "./CharacterCard";
+import Character from "./components/CharacterCard";
 
-import "./CardContainer.css";
+import "./pageCharacters.css";
 
 
 function CardContainer() {
@@ -47,18 +47,18 @@ function CardContainer() {
                         onChange={handleChanges}
                     />
                 </div>
-                <div>
-                    <span>Pages |</span>
-                    {
-                        [...Array(numberOfPages)].map((_, index) => {
-                            index += 1;
-                            return (
-                                <button key={index} onClick={() => setPage(index)}>{index}</button>
-                            )
-                        })
-                    }
-                    <span>|</span>
-                </div>
+            </div>
+            <div className="footer-buttons">
+                <span>Pages |</span>
+                {
+                    [...Array(numberOfPages)].map((_, index) => {
+                        index += 1;
+                        return (
+                            <button key={index} onClick={() => setPage(index)}>{index}</button>
+                        )
+                    })
+                }
+                <span>|</span>
             </div>
             <div className="characters">
                 {searchResults.map((data, index) => (

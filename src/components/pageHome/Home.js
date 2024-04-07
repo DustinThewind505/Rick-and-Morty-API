@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import seasonData from "../data";
+import seasonData from "../../data";
 
 function Home(){
     const [seasonAccordianSingleSelection, setSeasonAccordianSingleSelection] = useState(0)

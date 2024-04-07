@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Route } from "react-router-dom";
 
 import AppHeader from './components/app-header';
-import Home from './components/Home';
-import CardContainer from './components/CardContainer';
+import Home from './components/pageHome/Home';
+import CardContainer from './components/pageCharacters';
 import Footer from './components/footer'
 import './App.css';
 
