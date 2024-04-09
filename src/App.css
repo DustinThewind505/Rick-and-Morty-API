@@ -22,7 +22,7 @@
 }
 
 .app-header {
-  background: url("../public/images/rick-and-morty-wallpaper.jpg");
+  /* background: url("../public/images/rick-and-morty-wallpaper.jpg"); */
   background-color: #282c34;
   border-bottom: 2px solid #282c34;
   color: white;
@@ -125,7 +125,7 @@ span {
   width: 14rem;
 }
 
-@keyframes home-morty-gifs {
+/* @keyframes home-morty-gifs {
   0% {
     background: url("../public/images/morty-gif1.gif");
     background-size: cover;
@@ -145,7 +145,7 @@ span {
     background: url("../public/images/morty-gif1.gif");
     background-size: cover;
   }
-}
+} */
 
 .seasons-container {
   display: flex;
