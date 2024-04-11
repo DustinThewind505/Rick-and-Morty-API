@@ -5,15 +5,33 @@ import Character from "./components/CharacterCard";
 import "./pageCharacters.css";
 
 
+const defaultCharacter = {
+    name: "---",
+    image: "images/default-profile-image.jpeg",
+    location: "",
+    status: ""
+}
+
+
+
 function CardContainer() {
     const [page, setPage] = useState(1);
     const [numberOfPages, setNumberOfPages] = useState(0);
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [searchResults, setSearchResults] = useState([])
+    const [searchResults, setSearchResults] = useState([]);
+
+    const [charactersArray, setCharactersArray] = useState([]);
+    const [hoverCharacter, setHoverCharacter] = useState(defaultCharacter);
+
+
 
     function handleChanges(event) {
         setSearchTerm(event.target.value)
+    }
+
+    const handleHover = (characterObject) => {
+        setHoverCharacter(characterObject)
     }
 
     useEffect(() => {
@@ -24,15 +42,20 @@ function CardContainer() {
                     element.name.toLowerCase().includes(searchTerm.toLowerCase())
                 );
 
+                if(numberOfPages === 0) {
+                    setNumberOfPages(response.data.info.pages)
+                }
+
+                setCharactersArray(response.data.results)
+
                 setSearchResults(results)
-                setNumberOfPages(response.data.info.pages)
+                
             })
             .catch(error => {
                 console.log("The data was not returned", error);
             })
 
     }, [searchTerm, page, numberOfPages])
-
 
 
     return (
@@ -70,6 +93,25 @@ function CardContainer() {
                         location={data.location}
                     />
                 ))}
+            </div>
+            <Character 
+                name={hoverCharacter.name}
+                image={hoverCharacter.image}
+                location={hoverCharacter.location}
+                status={hoverCharacter.status} 
+            />
+            <div className="characters-menu">
+               {charactersArray.map((character, index) => {
+                   return(
+                        <img 
+                            key={index + 1}
+                            src={character.image}
+                            alt={character.name}
+                            onMouseOver={() => handleHover(character)}
+                            onMouseLeave={() => setHoverCharacter(defaultCharacter)} 
+                        />
+                   )
+               })} 
             </div>
             <div className="footer-buttons">
                     <span>Pages |</span>

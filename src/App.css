@@ -22,7 +22,7 @@
 }
 
 .app-header {
-  /* background: url("../public/images/rick-and-morty-wallpaper.jpg"); */
+  background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
   background-color: #282c34;
   border-bottom: 2px solid #282c34;
   color: white;
@@ -125,27 +125,27 @@ span {
   width: 14rem;
 }
 
-/* @keyframes home-morty-gifs {
+@keyframes home-morty-gifs {
   0% {
-    background: url("../public/images/morty-gif1.gif");
+    background: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWt3aXc2cDZ3cHQ5ZXFtY2NueDNucGVyZXp1Z3FtY284Z3QwZmt3aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l378BzHA5FwWFXVSg/giphy.gif");
     background-size: cover;
   }
 
   33% {
-    background: url("../public/images/evil-morty-gif1.gif");
+    background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXVyeTUzd25nMHkzMno4aDYxODllZ3F0YXVvbXZnaDFidmhvN3liZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dscW9yCuZ9uQ6XUHak/giphy.gif");
     background-size: cover;
   }
 
   66% {
-    background: url("../public/images/evil-morty-gif2.gif");
+    background: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3o1eGczMXBubW1scmp4em95a3N4OWZ0M2VseHpjbGNyNGMwMXExayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XgHGfkACG7RWPnVUZo/giphy.gif");
     background-size: cover;
   }
 
   100% {
-    background: url("../public/images/morty-gif1.gif");
+    background: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWt3aXc2cDZ3cHQ5ZXFtY2NueDNucGVyZXp1Z3FtY284Z3QwZmt3aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l378BzHA5FwWFXVSg/giphy.gif");
     background-size: cover;
   }
-} */
+}
 
 .seasons-container {
   display: flex;
