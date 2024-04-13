@@ -9,6 +9,8 @@ import './App.css';
 
 function App() {
   const [appPage, setAppPage] = useState("home");
+
+  console.log("Render TEST")
   
 
   return (

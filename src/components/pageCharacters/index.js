@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Character from "./components/CharacterCard";
+import SelectedCharacter from './components/selectedCharacter';
+
 
 import "./pageCharacters.css";
 
@@ -24,6 +26,8 @@ function CardContainer() {
     const [charactersArray, setCharactersArray] = useState([]);
     const [hoverCharacter, setHoverCharacter] = useState(defaultCharacter);
 
+    const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter)
+
 
 
     function handleChanges(event) {
@@ -34,6 +38,10 @@ function CardContainer() {
         setHoverCharacter(characterObject)
     }
 
+    const handleClick = (characterObject) => {
+        setSelectedCharacter(characterObject)
+    }
+
     useEffect(() => {
         axios
             .get(`https://rickandmortyapi.com/api/character?page=${page}`)
@@ -41,6 +49,8 @@ function CardContainer() {
                 const results = response.data.results.filter(element =>
                     element.name.toLowerCase().includes(searchTerm.toLowerCase())
                 );
+
+                console.log("API Call")
 
                 if(numberOfPages === 0) {
                     setNumberOfPages(response.data.info.pages)
@@ -55,11 +65,35 @@ function CardContainer() {
                 console.log("The data was not returned", error);
             })
 
-    }, [searchTerm, page, numberOfPages])
+    }, [numberOfPages, searchTerm, page])
 
 
     return (
         <section className="container">
+            <div>
+                <div className="selected-character-container">
+                    <Character 
+                        name={hoverCharacter.name}
+                        image={hoverCharacter.image}
+                        location={hoverCharacter.location}
+                        status={hoverCharacter.status} 
+                    />
+                    <SelectedCharacter selectedCharacter={selectedCharacter} />
+                </div>
+                <div className="characters-menu" onMouseLeave={() => setHoverCharacter(defaultCharacter)} >
+                    {charactersArray.map((character, index) => {
+                        return(
+                                <img 
+                                    key={index}
+                                    src={character.image}
+                                    alt={character.name}
+                                    onMouseOver={() => handleHover(character)}
+                                    onClick={() => handleClick(character)}
+                                />
+                        )
+                    })} 
+                </div>
+            </div>
             <div className="forms">
                 <div>
                     <span>Character: </span>
@@ -93,25 +127,6 @@ function CardContainer() {
                         location={data.location}
                     />
                 ))}
-            </div>
-            <Character 
-                name={hoverCharacter.name}
-                image={hoverCharacter.image}
-                location={hoverCharacter.location}
-                status={hoverCharacter.status} 
-            />
-            <div className="characters-menu">
-               {charactersArray.map((character, index) => {
-                   return(
-                        <img 
-                            key={index + 1}
-                            src={character.image}
-                            alt={character.name}
-                            onMouseOver={() => handleHover(character)}
-                            onMouseLeave={() => setHoverCharacter(defaultCharacter)} 
-                        />
-                   )
-               })} 
             </div>
             <div className="footer-buttons">
                     <span>Pages |</span>
