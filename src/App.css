@@ -54,9 +54,11 @@
 }
 
 .navbar a {
+  border-radius: .25rem;
   font-size: 2.5rem;
   font-family: 'Russo One', sans-serif;
   color: dodgerblue;
+  padding: .2rem;
   text-decoration: none;
   letter-spacing: 0.3rem;
 }
@@ -66,8 +68,7 @@
 }
 
 .navbar a.active {
-  color: greenyellow;
-  border: none;
+  color: limegreen;
   cursor: default;
   text-decoration: underline;
 }

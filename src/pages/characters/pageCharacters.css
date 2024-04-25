@@ -36,13 +36,35 @@ h2 {
     align-items: center;
   }
 
-  .selected-character div {
+  .selected-character-left, .selected-character-right {
     width: 50%;
   }
 
   .selected-character h2 {
     width: 100%;
     
+  }
+
+  .circle-rating-container {
+    background-color: aqua;
+    display: flex;
+    width: 90%;
+  }
+
+  .selected-character-right p:last-of-type {
+    font-family: 'Russo One', sans-serif;
+    font-size: large;
+    text-align: left;
+  }
+
+  .rating-circle {
+    border: 2px solid black;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .active {
+    background-color: gold;
   }
   
   .character-list {
@@ -99,10 +121,6 @@ h2 {
 
   .forms div {
       width: 50%;
-  }
-
-  .forms div:first-child {
-      
   }
 
   .forms input {

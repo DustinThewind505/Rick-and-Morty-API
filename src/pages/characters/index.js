@@ -28,10 +28,19 @@ function CardContainer() {
 
     const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter)
 
+    const [circleRating, setCircleRating] = useState(0);
+    console.log(circleRating)
 
 
     function handleChanges(event) {
         setSearchTerm(event.target.value)
+    }
+
+    const handleCharacterMenuOnLeave = () => {
+        if(circleRating > 0) {
+            setCircleRating(0)
+        }
+        setHoverCharacter(defaultCharacter)
     }
 
     const handleHover = (characterObject) => {
@@ -39,6 +48,9 @@ function CardContainer() {
     }
 
     const handleClick = (characterObject) => {
+        if(circleRating > 0) {
+            setCircleRating(0)
+        }
         setSelectedCharacter(characterObject)
     }
 
@@ -78,9 +90,9 @@ function CardContainer() {
                         location={hoverCharacter.location}
                         status={hoverCharacter.status} 
                     />
-                    <SelectedCharacter selectedCharacter={selectedCharacter} />
+                    <SelectedCharacter selectedCharacter={selectedCharacter} circleRating={circleRating} setCircleRating={setCircleRating} />
                 </div>
-                <div className="characters-menu" onMouseLeave={() => setHoverCharacter(defaultCharacter)} >
+                <div className="characters-menu" onMouseLeave={() => handleCharacterMenuOnLeave()} >
                     {charactersArray.map((character, index) => {
                         return(
                                 <img 
