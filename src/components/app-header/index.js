@@ -14,6 +14,7 @@ export default function AppHeader({ appPage, setAppPage }) {
         <header className="app-header">
             <nav className="navbar">
                 <NavLink exact to="/" onClick={() => handleNavClick("home")} >Home</NavLink>
+                <NavLink to="/episodes" onClick={() => handleNavClick("episodes")} >Episodes</NavLink>
                 <NavLink to="/characters" onClick={() => handleNavClick("characters")} >Characters</NavLink>
             </nav>
 

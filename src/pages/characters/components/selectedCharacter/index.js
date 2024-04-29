@@ -26,7 +26,7 @@ export default function SelectedCharacter({ selectedCharacter, circleRating, set
                 <h2>{selectedCharacter.name}</h2>
                 <p>{selectedCharacter.location.name}</p>
                 <p>{selectedCharacter.status}</p>
-                <p>Rating:</p>
+                <p>Rating: {circleRating} out of 5</p>
                 <div className="circle-rating-container">
                     {
                         [...Array(numberOfCircles)].map((_, index) => {

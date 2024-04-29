@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Character from "./components/CharacterCard";
+import Character from "./components/characterCard";
 import SelectedCharacter from './components/selectedCharacter';
 
 
-import "./pageCharacters.css";
+import "./components-page.css";
 
 
 const defaultCharacter = {

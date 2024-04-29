@@ -1,14 +1,18 @@
 # Welcome to my Rick and Morty app! (React)
 
 To run:
+### `yarn install`
 ### `yarn start`
 
 ## Home Page
+
+
+## Episodes Page
 Inspired by:
 
 ### `https://www.adultswim.com/videos/rick-and-morty`
 
-Seasons section of home page has accordian functionalty.
+Seasons section of episodes page has accordian functionalty.
 
 
 ## Characters Page

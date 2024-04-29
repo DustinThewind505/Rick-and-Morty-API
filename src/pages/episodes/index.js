@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import seasonData from "../../data";
 
-function Home(){
+import "./episodes-page.css"
+
+function EpisodesPage(){
     const [seasonAccordianSingleSelection, setSeasonAccordianSingleSelection] = useState(0)
 
     const handleSingleSelection = (id) => {
@@ -17,7 +19,7 @@ function Home(){
 
     
     return(
-        <div className="home-container">
+        <div className="episodes-page-container">
             <div className="morty-gifs">
                 <img src="images/rick-morty-logo.png" alt="Rick and Morty logo" />
                 <a href="https://www.adultswim.com/streams/rick-and-morty" rel="noopener noreferrer" target="_blank" >FREE 24/7 MARATHON</a>
@@ -52,4 +54,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default EpisodesPage;
