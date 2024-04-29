@@ -7,6 +7,7 @@
 }
 
 .App {
+  background-color: rgb(17, 17, 17);
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -15,25 +16,14 @@
   height: 40vmin;
 }
 
+.header-logo {
+  scale: 1.5;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.app-header {
-  background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
-  background-color: #282c34;
-  border-bottom: 2px solid #282c34;
-  color: white;
-  font-size: calc(10px + 2vmin);
-  font-family: 'Special Elite', cursive;
-  min-height: 50vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 @keyframes App-logo-spin {
@@ -45,19 +35,40 @@
   }
 }
 
+.app-header {
+  background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
+  background-color: #282c34;
+  border-bottom: 2px solid #282c34;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  font-family: 'Special Elite', cursive;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header p {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
   width: 100%;
+  z-index: 1;
 }
 
 .navbar a {
   border-radius: .25rem;
   font-size: 2.5rem;
   font-family: 'Russo One', sans-serif;
-  color: dodgerblue;
+  color: lightseagreen;
   padding: .2rem;
   text-decoration: none;
   letter-spacing: 0.3rem;
@@ -68,7 +79,8 @@
 }
 
 .navbar a.active {
-  color: limegreen;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: dodgerblue;
   cursor: default;
   text-decoration: underline;
 }

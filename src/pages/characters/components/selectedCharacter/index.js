@@ -10,6 +10,7 @@ export default function SelectedCharacter({ selectedCharacter, circleRating, set
     }
 
     const handleRatingOnClick = (rating)  => {
+        setCircleRating(0)
         if(circleRating === rating) {
             setCircleRating(0)
         } else {

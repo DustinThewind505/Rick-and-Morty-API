@@ -4,7 +4,7 @@ import Character from "./components/characterCard";
 import SelectedCharacter from './components/selectedCharacter';
 
 
-import "./components-page.css";
+import "./characters-page.css";
 
 
 const defaultCharacter = {
