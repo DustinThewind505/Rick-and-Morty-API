@@ -19,11 +19,17 @@ export default function AppHeader({ appPage, setAppPage }) {
             </nav>
 
             {
-            appPage === "home" ? 
-            <img src="images/rick-sanchez-head.png" className="App-logo header-logo" alt="Spinning Rick Sanchez head" />
-            :
-            <img src="images/jerrySmithHead.png" className="App-logo header-logo" alt="Spinning Rick Sanchez head" />
+                appPage === "home" ? 
+                    <img src="images/rick-sanchez-head.png" className="App-logo header-logo" alt="Spinning Rick Sanchez head" />
+                :
+                appPage === "episodes" ? 
+                    <img src="images/jerrySmithHead.png" className="App-logo header-logo" alt="Spinning Rick Sanchez head" />
+                :
+                    <img src="images/morty.png" className="App-logo header-logo" alt="Spinning Rick Sanchez head" />
             }
+
+
+
             {
             appPage === "home" ? 
             <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>

@@ -18,18 +18,19 @@ const defaultCharacter = {
 
 function CardContainer() {
     const [page, setPage] = useState(1);
+    const [loadMorepage, setLoadMorePage] = useState(1);
     const [numberOfPages, setNumberOfPages] = useState(0);
 
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
 
     const [charactersArray, setCharactersArray] = useState([]);
+    const [loadMorearray, setloadMoreArray] = useState([])
     const [hoverCharacter, setHoverCharacter] = useState(defaultCharacter);
 
-    const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter)
+    const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter);
 
     const [circleRating, setCircleRating] = useState(0);
-    console.log(circleRating)
 
 
     function handleChanges(event) {
@@ -62,7 +63,6 @@ function CardContainer() {
                     element.name.toLowerCase().includes(searchTerm.toLowerCase())
                 );
 
-                console.log("API Call")
 
                 if(numberOfPages === 0) {
                     setNumberOfPages(response.data.info.pages)
@@ -77,7 +77,22 @@ function CardContainer() {
                 console.log("The data was not returned", error);
             })
 
-    }, [numberOfPages, searchTerm, page])
+    }, [searchTerm, page])
+
+    useEffect(() => {
+        axios
+            .get(`https://rickandmortyapi.com/api/character?page=${loadMorepage}`)
+            .then(response => {
+
+                const newLoadMoreArray = [...loadMorearray, ...response.data.results];
+                setloadMoreArray(newLoadMoreArray)
+                
+            })
+            .catch(error => {
+                console.log("The load more data was not returned", error);
+            })
+
+    }, [loadMorepage])
 
 
     return (
@@ -119,14 +134,14 @@ function CardContainer() {
             </div>
             <div className="footer-buttons">
                 <span>Pages |</span>
-                {
-                    [...Array(numberOfPages)].map((_, index) => {
-                        index += 1;
-                        return (
-                            <button key={index} onClick={() => setPage(index)}>{index}</button>
-                        )
-                    })
-                }
+                    {
+                        [...Array(numberOfPages)].map((_, index) => {
+                            index += 1;
+                            return (
+                                <button key={index} onClick={() => setPage(index)}>{index}</button>
+                            )
+                        })
+                    }
                 <span>|</span>
             </div>
             <div className="characters">
@@ -141,7 +156,7 @@ function CardContainer() {
                 ))}
             </div>
             <div className="footer-buttons">
-                    <span>Pages |</span>
+                <span>Pages |</span>
                     {
                         [...Array(numberOfPages)].map((_, index) => {
                             index += 1;
@@ -150,8 +165,18 @@ function CardContainer() {
                             )
                         })
                     }
-                    <span>|</span>
-                </div>
+                <span>|</span>
+            </div>
+            <div className="characters-load-more-container">
+                {
+                    loadMorearray.map((character) => {
+                        return(
+                            <img src={character.image} alt={character.name} />
+                        )
+                    })
+                }
+            </div>
+            <button onClick={() => setLoadMorePage(loadMorepage + 1)}>Load More</button>
         </section>
 
 

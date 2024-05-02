@@ -12,11 +12,11 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-end;
-    margin: 0.3% 0;
+    margin: 5rem 0;
   }
   
   .selected-character-container {
-    background-color: papayawhip;
+    background-color: darkcyan;
     border-radius: 0.5rem;
     margin: 0 auto;
     padding: 2rem;
@@ -68,7 +68,8 @@ h2 {
   }
   
   .character-list {
-    width: 32%;
+    width: 21%;
+    height: 33rem;
     background-color: #404753;
     border-radius: 80px;
     margin-bottom: 3%;
@@ -85,6 +86,13 @@ h2 {
       margin: 2% 0;
       border: 2px solid black;
   }
+
+  .character-list h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
 
   .doa {
     font-family: 'Special Elite', cursive;
@@ -198,4 +206,16 @@ h2 {
         display: flex;
         flex-direction: column;
     }
+}
+
+.characters-load-more-container {
+  margin: 0 auto;
+  width: 95%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.characters-load-more-container img {
+  width: 10%;
 }
