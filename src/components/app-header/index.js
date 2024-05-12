@@ -32,13 +32,18 @@ export default function AppHeader({ appPage, setAppPage }) {
 
             {
             appPage === "home" ? 
-            <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>
-                "Wubba Lubba Dub Dub!" -Rick Sanchez
-            </p>
+                <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>
+                    "Wubba Lubba Dub Dub!" -Rick Sanchez
+                </p>
             :
-            <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>
-                "Pluto Was A Planet!" -Jerry Smith
-            </p>
+            appPage === "episodes" ? 
+                <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>
+                    "Pluto Was A Planet!" -Jerry Smith
+                </p>
+            :
+                <p onMouseOver={(event) => event.target.style.color = "yellow"} onMouseLeave={(event) => event.target.style.color = "white"}>
+                    "Aw, geez!" -Morty Smith
+                </p>
             }
 
         </header>

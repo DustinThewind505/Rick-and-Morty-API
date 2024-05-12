@@ -1,3 +1,5 @@
 .home-container {
+    background-image: linear-gradient(black, gray);
+    border-top: 1px solid lime;
     color: black;
 }

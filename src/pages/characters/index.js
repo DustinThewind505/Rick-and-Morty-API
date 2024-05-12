@@ -77,7 +77,7 @@ function CardContainer() {
                 console.log("The data was not returned", error);
             })
 
-    }, [searchTerm, page])
+    }, [searchTerm, page, numberOfPages])
 
     useEffect(() => {
         axios
@@ -155,18 +155,6 @@ function CardContainer() {
                     />
                 ))}
             </div>
-            <div className="footer-buttons">
-                <span>Pages |</span>
-                    {
-                        [...Array(numberOfPages)].map((_, index) => {
-                            index += 1;
-                            return (
-                                <button key={index} onClick={() => setPage(index)}>{index}</button>
-                            )
-                        })
-                    }
-                <span>|</span>
-            </div>
             <div className="characters-load-more-container">
                 {
                     loadMorearray.map((character) => {
@@ -176,7 +164,7 @@ function CardContainer() {
                     })
                 }
             </div>
-            <button onClick={() => setLoadMorePage(loadMorepage + 1)}>Load More</button>
+            <button className="characters-load-more-button" onClick={() => setLoadMorePage(loadMorepage + 1)}>Load More</button>
         </section>
 
 
