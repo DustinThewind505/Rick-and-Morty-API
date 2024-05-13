@@ -70,27 +70,32 @@ h2 {
   background-color: gold;
 }
 
-.character-list {
-  width: 21%;
+.character-card {
+  width: 17%;
   height: 33rem;
   background-color: #404753;
+  border: 1px solid black;
   border-radius: 80px;
   margin-bottom: 3%;
-  padding: 1% 0;
+  padding: 1rem;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   font-family: 'Russo One', sans-serif;
 }
 
-.character-list:hover {
+.character-card:hover {
   background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
+  border: 1px solid white;
+  scale: 1.15;
+  transition: scale .6s;
 }
 
-.character-list img {
+.character-card img {
   margin: 2% 0;
   border: 2px solid black;
+  width: 100%;
 }
 
-.character-list h2 {
+.character-card h2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,14 +176,14 @@ h2 {
     align-items: center;
   }
 
-  .character-list {
+  .character-card {
     width: 90%;
     border-radius: 10px;
     padding: 0;
     background: url("https://wallpaperboat.com/wp-content/uploads/2019/04/rick-and-morty-wallpaper-portal-wallpaper-001.jpg");
   }
 
-  .character-list div {
+  .character-card div {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
@@ -207,7 +212,7 @@ h2 {
     width: 100%;
   }
 
-  .character-list div {
+  .character-card div {
     display: flex;
     flex-direction: column;
   }
